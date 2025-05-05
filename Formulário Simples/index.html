@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Simples</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo-principal">Formulário Simples</h1>
+        <form action="#" method="post">
+            <div class="form-group card">
+                <h2 class="pergunta">Qual é a capital do Brasil?</h2>
+                <div class="opcoes">
+                    <div class="opcao">
+                        <input type="radio" name="capital" id="brasilia" value="brasilia">
+                        <label for="brasilia">Brasília</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="radio" name="capital" id="pvh" value="pvh">
+                        <label for="pvh">Porto Velho</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="radio" name="capital" id="cuiaba" value="cuiaba">
+                        <label for="cuiaba">Cuiabá</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group card">
+                <h2 class="pergunta">Selecione o que quer de café da manhã:</h2>
+                <div class="opcoes-grid">
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="pao" value="pao">
+                        <label for="pao">Pão Francês</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="leite" value="leite">
+                        <label for="leite">Leite</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="cafe" value="cafe">
+                        <label for="cafe">Café Expresso</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="suco" value="suco">
+                        <label for="suco">Suco Natural</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="iogurte" value="iogurte">
+                        <label for="iogurte">Iogurte Natural</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="cereal" value="cereal">
+                        <label for="cereal">Leite e Cereal</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="queijo" value="queijo">
+                        <label for="queijo">Queijo e Presunto</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="ovos" value="ovos">
+                        <label for="ovos">Ovos Mexidos</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="cafe-da-manha" id="bolo" value="bolo">
+                        <label for="bolo">Bolo Caseiro</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group card">
+                <label for="estado" class="label-estado">Estados brasileiros</label>
+                <select id="estado" name="estado" class="select-estado">
+                    <option value="" disabled selected>Selecione seu estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="botao-enviar">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
