@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Portal de Cursos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastre-se</h1>
+            <p>Preencha o formulário abaixo para obter acesso aos cursos</p>
+        </header>
+        
+        <form class="form-cadastro">
+            <div class="form-group">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" placeholder="Ex: Harryzinho">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="harryvb@exemplo.com">
+            </div>
+            
+            <div class="form-group">
+                <label class="gender-label">Sexo:</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="sexo" id="sexo_masculino">
+                        <span class="radio-custom"></span>
+                        Masculino
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="sexo" id="sexo_feminino">
+                        <span class="radio-custom"></span>
+                        Feminino
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cursos">Curso de interesse:</label>
+                <select id="cursos">
+                    <option value="0">Selecione um curso</option>
+                    <option value="1">HTML e CSS</option>
+                    <option value="2">Git e GitHub</option>
+                    <option value="3">JavaScript</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="descricao_pessoal">Sobre você:</label>
+                <textarea id="descricao_pessoal" rows="4" placeholder="Conte-nos um pouco sobre você..."></textarea>
+            </div>
+            
+            <div class="form-group terms">
+                <label class="checkbox-option">
+                    <input type="checkbox" id="termos">
+                    <span class="checkbox-custom"></span>
+                    Li e estou de acordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>
+                </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Criar minha conta</button>
+        </form>
+    </div>
+</body>
+</html>
