@@ -54,7 +54,7 @@ textarea {
 
 textarea {
     height: 100px;
-    resize: vertical;
+    resize: none;
 }
 
 .radio-group {
