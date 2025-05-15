@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f3f3f3;
+}
+
+.topbar {
+    background: #222;
+    color: white;
+    padding: 10px;
+}
+
+.topbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.topbar ul li {
+    display: inline;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.projetos {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projetos img {
+    width: 90%;
+    margin: 5px;
+}
+
+.sobre {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.sobre .texto {
+    width: 60%;
+    float: left;
+    padding: 10px;
+}
+
+.sobre .video {
+    width: 35%;
+    float: right;
+    padding: 10px;
+}
+
+.faq {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.faq details {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.equipe {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.membro {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.membro img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.grid-equipe {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.grid-equipe img {
+    width: 60px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+footer {
+    background: #444;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+    height: 40px;
+    margin: 0 15px;
+}
