@@ -14,8 +14,7 @@
   }
 
 .menu {
-    background-color: aliceblue;
-    color: navy;
+    background-color: #1B4436;
     padding: 8px;
 }
 
@@ -34,8 +33,8 @@
 }
 
 .menu_link:hover {
-    background-color: aquamarine;
-    padding: 10px 16px;
+    background-color: green;
+    padding: 10px;
 }
 
 .info {
@@ -98,17 +97,19 @@
 }
 
 .card-link {
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     padding: 10px 16px;
-    background-color: #218d8d;
+    background-color: green;
     color: black;
     border-radius: 12px;
     transition: background-color 0.3s, transform 0.2;
     font-weight: bold;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-link:hover {
-    background-color: #14398a;
-    transform: scale(1.05);
+    background-color: #1B4436;
 }
