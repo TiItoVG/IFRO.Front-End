@@ -13,8 +13,54 @@
     font-variation-settings: "GRAD" 0;
   }
 
+.menu {
+    background-color: aliceblue;
+    color: navy;
+    padding: 8px;
+}
+
+.menu_conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+.menu_link {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu_link:hover {
+    background-color: aquamarine;
+    padding: 10px 16px;
+}
+
+.info {
+    background: url(../images/gramado.png);
+    background-size: cover;
+    background-position: center;
+    height: 260px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    text-align: center;
+}
+
+.texto {
+    background-color: green;
+    padding: 10px 16px;
+    width: 300px;
+    opacity: 0.83;
+}
+
+
 .card {
-    /* margin: 8px; */
     padding: 8px;
     border: 2px solid #505050;
     border-radius: 15px;
@@ -52,9 +98,17 @@
 }
 
 .card-link {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 16px;
+    background-color: #218d8d;
+    color: black;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.2;
+    font-weight: bold;
+}
+
+.card-link:hover {
+    background-color: #14398a;
+    transform: scale(1.05);
 }
