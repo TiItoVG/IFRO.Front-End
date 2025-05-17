@@ -41,8 +41,9 @@ body {
 }
 
 h2 {
+    padding-left: 80px;
     margin: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .projetos {
