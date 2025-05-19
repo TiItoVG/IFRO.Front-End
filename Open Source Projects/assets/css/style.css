@@ -206,6 +206,7 @@ body {
   font-size: 13px;
   transition: background-color 0.2s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card-botao:hover {

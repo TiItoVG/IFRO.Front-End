@@ -1,60 +1,320 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cidades Inteligentes</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header id = "inicio">
-            <nav class="menu">
-                <ul class = "menu_conteudo">
-                    <li><a href = "#inicio" class="menu_link">Início</a></li>
-                    <li><a href = "#metas" class="menu_link">Metas</a></li>
-                    <li><a href = "#cronograma" class="menu_link">Cronograma</a></li>
-                    <li><a href = "#equipe" class="menu_link">Equipe</a></li>
-                    <li><a href = "#transparencia" class="menu_link">Transparência</a></li>
+<head>
+    <meta charset="UTF-8">
+    <title>Cidades Inteligentes</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="topbar">
+        <ul>
+            <li><a href="#inicio" class="menu_link">Início</a></li>
+            <li><a href="#metas" class="menu_link">Metas</a></li>
+            <li><a href="#cronograma" class="menu_link">Cronograma</a></li>
+            <li><a href="#equipe" class="menu_link">Equipe</a></li>
+            <li><a href="#transparencia" class="menu_link">Transparência</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <div class="logo">
+            <img src="./assets/images/smartcitys.png" alt="Logo das Cidades Inteligentes">
+        </div>
+    </div>
+    <h2 id="inicio">Entenda o Projeto</h2>
+    <div class="sobre">
+        <div class="texto">
+            <p>
+                Implementar políticas públicas associadas a tecnologias da informação e comunicação que atendam as expectativas dos cidadãos e melhorem a qualidade dos serviços públicos, são desafios enfrentados pelos gestores públicos para se adaptar às mudanças do mundo contemporâneo.
+                <br><br>
+                Neste contexto, a implementação de infraestrutura, equipamentos e aplicações inteligentes são ferramentas necessárias para superar tais desafios, proporcionando uma redução de custos econômicos e sociais, e consequentemente, melhorando a qualidade de vida da população.
+                <br><br>
+                O projeto Cidades Inteligentes busca desenvolver e implantar soluções de Cidades Inteligentes no município de Cerejeiras - RO, alinhando ações e soluções inteligentes com base nas necessidades do município.
+                <br><br>
+                A duração prevista do projeto é de 18 meses, com investimentos de R$ 4.000.000,00 (quatro milhões de reais).
+            </p>
+        </div>
+        <div class="video">
+            <img src="./assets/images/iconevideo.png" alt="Vídeo">
+        </div>
+    </div>
+    <h2 id="metas">Metas</h2>
+    <main class="card-galeria">
+        <!-- Card 1 - Wi-Fi Público -->
+        <div class="card" onclick="abrirModal('modal-wifi')">
+            <img src="assets/images/mulher.png" alt="Wi-Fi Público" class="card-imagem">
+            <h2 class="card-titulo">Meta 1 - Wi-Fi Público</h2>
+            <p class="card-texto">Implementação de pontos de Wi-Fi público em áreas estratégicas da cidade</p>
+        </div>
+
+        <!-- Card 2 - Infraestrutura de TIC -->
+        <div class="card" onclick="abrirModal('modal-infra')">
+            <img src="assets/images/fios.png" alt="Infraestrutura de TIC" class="card-imagem">
+            <h2 class="card-titulo">Meta 2 - Infraestrutura de TIC</h2>
+            <p class="card-texto">Modernização da infraestrutura de tecnologia da informação</p>
+        </div>
+
+        <!-- Card 3 - Videomonitoramento -->
+        <div class="card" onclick="abrirModal('modal-video')">
+            <img src="assets/images/cameras.png" alt="Videomonitoramento" class="card-imagem">
+            <h2 class="card-titulo">Meta 3 - Videomonitoramento</h2>
+            <p class="card-texto">Sistema de câmeras para segurança pública</p>
+        </div>
+
+        <!-- Card 4 - Gestão de Serviços Públicos -->
+        <div class="card" onclick="abrirModal('modal-gestao')">
+            <img src="assets/images/eletricista.png" alt="Gestão de Serviços Públicos" class="card-imagem">
+            <h2 class="card-titulo">Meta 4 - Software para Gestão de Serviços Públicos</h2>
+            <p class="card-texto">Sistema integrado para gestão municipal</p>
+        </div>
+
+        <!-- Card 5 - Gestão de Frotas -->
+        <div class="card" onclick="abrirModal('modal-frotas')">
+            <img src="assets/images/escavadeira.png" alt="Gestão de Frotas" class="card-imagem">
+            <h2 class="card-titulo">Meta 5 - Software para Gestão de Frotas</h2>
+            <p class="card-texto">Otimização da frota de veículos municipais</p>
+        </div>
+
+        <!-- Card 6 - PDTIC -->
+        <div class="card" onclick="abrirModal('modal-pdtic')">
+            <img src="assets/images/caderno.png" alt="PDTIC" class="card-imagem">
+            <h2 class="card-titulo">Meta 6 - PDTIC</h2>
+            <p class="card-texto">Plano Diretor de Tecnologia da Informação e Comunicação</p>
+        </div>
+    </main>
+
+    <!-- Modais -->
+    <!-- Modal 1 - Wi-Fi Público -->
+    <div id="modal-wifi" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Meta 1 - Wi-Fi Público</h2>
+            <img src="assets/images/mulher.png" alt="Wi-Fi Público" class="modal-imagem">
+            <div class="modal-texto">
+                <p><strong>Descrição Completa:</strong> Implementação de 50 pontos de acesso Wi-Fi gratuito em áreas de grande circulação pública como praças, terminais de transporte, unidades de saúde e escolas municipais.</p>
+                <p><strong>Benefícios:</strong></p>
+                <ul>
+                    <li>Inclusão digital da população</li>
+                    <li>Acesso a serviços públicos online</li>
+                    <li>Fomento ao turismo e comércio local</li>
+                    <li>Redução da desigualdade digital</li>
                 </ul>
-            </nav>
-            <div class="info">
-                <img src="cidades.webp" alt="Foto da pessoa do portfólio" width="150" height="150"
-                class="foto">
-                <h1>Cidades Inteligentes</h1>
-                <h2>CEREJEIRAS/RO</h2>
+                <p><strong>Investimento:</strong> R$ 500.000,00</p>
+                <p><strong>Prazo:</strong> 6 meses</p>
+                <p><strong>Áreas beneficiadas:</strong> Centro, bairros periféricos e distritos</p>
             </div>
-        </header>
-        <main class="conteudo">
-            <div>
-                <h2 class="titulo" id="formacao">Entenda o projeto</h2>
-                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio expedita numquam adipisci molestiae excepturi ipsa ipsam odit illo, voluptas blanditiis, animi voluptate commodi, voluptatem maxime hic repudiandae reiciendis quod dolores?</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Infraestrutura de TIC -->
+    <div id="modal-infra" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Meta 2 - Infraestrutura de TIC</h2>
+            <img src="assets/images/fios.png" alt="Infraestrutura de TIC" class="modal-imagem">
+            <div class="modal-texto">
+                <p><strong>Descrição Completa:</strong> Modernização completa da infraestrutura de rede de dados municipal, incluindo cabeamento estruturado, switches e roteadores de alta capacidade.</p>
+                <p><strong>Benefícios:</strong></p>
+                <ul>
+                    <li>Maior velocidade e confiabilidade na rede municipal</li>
+                    <li>Segurança de dados aprimorada</li>
+                    <li>Preparação para tecnologias futuras</li>
+                    <li>Redução de custos com manutenção</li>
+                </ul>
+                <p><strong>Investimento:</strong> R$ 850.000,00</p>
+                <p><strong>Prazo:</strong> 8 meses</p>
             </div>
-            <div>
-                <h2 class="titulo" id="metas">Metas</h2>
-                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores expedita maxime eaque a neque, iste, illum voluptate quam accusamus impedit quae rem consequatur officia sunt aliquam quidem deserunt necessitatibus.</p>
+        </div>
+    </div>
+
+    <!-- Modal 3 - Videomonitoramento -->
+    <div id="modal-video" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Meta 3 - Videomonitoramento</h2>
+            <img src="assets/images/cameras.png" alt="Videomonitoramento" class="modal-imagem">
+            <div class="modal-texto">
+                <p><strong>Descrição Completa:</strong> Instalação de 120 câmeras de monitoramento de alta definição com reconhecimento facial e análise de comportamento em pontos estratégicos da cidade.</p>
+                <p><strong>Benefícios:</strong></p>
+                <ul>
+                    <li>Redução da criminalidade</li>
+                    <li>Monitoramento de trânsito em tempo real</li>
+                    <li>Maior sensação de segurança</li>
+                    <li>Integração com a guarda municipal</li>
+                </ul>
+                <p><strong>Investimento:</strong> R$ 1.200.000,00</p>
+                <p><strong>Prazo:</strong> 10 meses</p>
             </div>
-            <div>
-                <h2 class="titulo" id="cronograma">Cronogramas</h2>
-                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores expedita maxime eaque a neque, iste, illum voluptate quam accusamus impedit quae rem consequatur officia sunt aliquam quidem deserunt necessitatibus.</p>
+        </div>
+    </div>
+
+    <!-- Modal 4 - Gestão de Serviços Públicos -->
+    <div id="modal-gestao" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Meta 4 - Software para Gestão de Serviços Públicos</h2>
+            <img src="assets/images/eletricista.png" alt="Gestão de Serviços Públicos" class="modal-imagem">
+            <div class="modal-texto">
+                <p><strong>Descrição Completa:</strong> Desenvolvimento de sistema integrado para gestão de serviços públicos como iluminação, limpeza urbana, manutenção de vias e fiscalização.</p>
+                <p><strong>Benefícios:</strong></p>
+                <ul>
+                    <li>Otimização dos recursos municipais</li>
+                    <li>Transparência na gestão</li>
+                    <li>Redução de tempo de resposta</li>
+                    <li>Integração entre secretarias</li>
+                </ul>
+                <p><strong>Investimento:</strong> R$ 600.000,00</p>
+                <p><strong>Prazo:</strong> 9 meses</p>
             </div>
-            <div>
-                <h2 class="titulo" id="Metas">Cidades Inteligentes de Cerejeiras na Mídia</h2>
-                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores expedita maxime eaque a neque, iste, illum voluptate quam accusamus impedit quae rem consequatur officia sunt aliquam quidem deserunt necessitatibus.</p>
+        </div>
+    </div>
+
+    <!-- Modal 5 - Gestão de Frotas -->
+    <div id="modal-frotas" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Meta 5 - Software para Gestão de Frotas</h2>
+            <img src="assets/images/escavadeira.png" alt="Gestão de Frotas" class="modal-imagem">
+            <div class="modal-texto">
+                <p><strong>Descrição Completa:</strong> Sistema para gestão inteligente da frota de veículos municipais, incluindo controle de manutenção, rotas e consumo de combustível.</p>
+                <p><strong>Benefícios:</strong></p>
+                <ul>
+                    <li>Redução de custos com combustível</li>
+                    <li>Manutenção preventiva</li>
+                    <li>Otimização de rotas</li>
+                    <li>Controle de utilização</li>
+                </ul>
+                <p><strong>Investimento:</strong> R$ 350.000,00</p>
+                <p><strong>Prazo:</strong> 5 meses</p>
             </div>
-            <div>
-                <h2 class="titulo" id="Metas">Equipe</h2>
-                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores expedita maxime eaque a neque, iste, illum voluptate quam accusamus impedit quae rem consequatur officia sunt aliquam quidem deserunt necessitatibus.</p>
+        </div>
+    </div>
+
+    <!-- Modal 6 - PDTIC -->
+    <div id="modal-pdtic" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Meta 6 - PDTIC</h2>
+            <img src="assets/images/caderno.png" alt="PDTIC" class="modal-imagem">
+            <div class="modal-texto">
+                <p><strong>Descrição Completa:</strong> Elaboração do Plano Diretor de Tecnologia da Informação e Comunicação para o município, com planejamento estratégico para os próximos 5 anos.</p>
+                <p><strong>Benefícios:</strong></p>
+                <ul>
+                    <li>Direcionamento claro para investimentos em TI</li>
+                    <li>Alinhamento com as melhores práticas nacionais</li>
+                    <li>Previsibilidade orçamentária</li>
+                    <li>Integração com outros planos municipais</li>
+                </ul>
+                <p><strong>Investimento:</strong> R$ 300.000,00</p>
+                <p><strong>Prazo:</strong> 4 meses</p>
             </div>
-        </main>
-        <footer class="rodape">
-            <div class="rodape_conteudo">
-                <img src="https://portal.ifro.edu.br/images/Campi/Vilhena/Imagens/Logotipo-IFRO-vilhena-3.png" alt="Logotipo IFRO Campus Vilhena" width="200">
-                <img src="https://portal.ifro.edu.br/images/Campi/Vilhena/Imagens/Logotipo-IFRO-vilhena-3.png" alt="Logotipo FSLab" width="200">
-                <img src="https://portal.ifro.edu.br/images/Campi/Vilhena/Imagens/Logotipo-IFRO-vilhena-3.png" alt="Logotipo Prefeitura Cerejeiras" width="200">
-                <img src="https://portal.ifro.edu.br/images/Campi/Vilhena/Imagens/Logotipo-IFRO-vilhena-3.png" alt="Logotipo Brasil Governo Federal" width="200">
-            </div>
-        </footer>
-    </body>
+        </div>
+    </div>
+    <!-- Feito pelo chat-gpt-->
+    <script>
+        // Função para abrir modal
+        function abrirModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        // Fechar modal ao clicar no X
+        document.querySelectorAll('.close').forEach(function(closeBtn) {
+            closeBtn.onclick = function() {
+                this.closest('.modal').style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        });
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        // Fechar com ESC
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.keyCode === 27) {
+                document.querySelectorAll('.modal').forEach(function(modal) {
+                    modal.style.display = "none";
+                    document.body.style.overflow = "auto";
+                });
+            }
+        };
+    </script>
+    <!-- Fim do chat-gpt -->
+     <h2 id="cronograma">Cronograma</h2>
+     <div class="sobre">
+        <div class="texto">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum iste quasi ab corrupti iure harum a repellendus aut aspernatur. Dolorum ex quidem iusto tempore fuga, incidunt deleniti qui nihil!
+            </p>
+        </div>
+         </div>
+    <!-- TODO CRONOGRAMA -->
+     <h2>Cidades Inteligentes de Cerejeiras na Mídia</h2>
+    <div class="sobre">
+        <div class="midia">
+        <img src="./assets/images/midiasc.png" width="335px" height="170px" alt="Foto de pessoas que participam do projeto Cidades Inteligentes de Cerejeiras/RO">
+        </div>
+        <div class="texto">
+            <p>
+                Projeto Cidades Inteligentes é iniciado no município de Cerejeiras
+            </p>
+        </div>
+    </div>
+         <h2 id="equipe">Equipe</h2>
+    <section class="equipe">
+  <div class="equipe-container">
+    <div class="card-equipe">
+      <img src="assets/images/icone.png" alt="Foto do Coordenador" class="avatar">
+      <div class="info">
+        <p class="nome">Harry Vieira</p>
+        <p class="cargo">Coordenador Geral</p>
+      </div>
+    </div>
+
+    <div class="card-equipe">
+      <img src="assets/images/icone.png" alt="Foto da Coordenadora" class="avatar">
+      <div class="info">
+        <p class="nome">Fátima Gonçalves</p>
+        <p class="cargo">Coordenadora Geral</p>
+      </div>
+    </div>
+
+    <div class="card-equipe">
+      <img src="assets/images/icone.png" alt="Foto da Coordenadora" class="avatar">
+      <div class="info">
+        <p class="nome">Louise Gonçalves</p>
+        <p class="cargo">Coordenadora Geral</p>
+      </div>
+    </div>
+
+    <div class="card-equipe">
+      <img src="assets/images/icone.png" alt="Foto do Coordenador" class="avatar">
+      <div class="info">
+        <p class="nome">Timóteo Vieira</p>
+        <p class="cargo">Coordenador Geral</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-logos">
+        <a href="https://www.instagram.com/ifro.vilhena/" target="_blank">
+        <img src="assets/images/iconeifro.png" alt="Instituto Federal de Rondônia">
+        </a>
+        <a href="https://www.instagram.com/fslab.vilhena/" target="_blank">
+        <img src="assets/images/iconefslab.png" alt="FSLAB">
+        </a>
+        <a href="https://www.instagram.com/prefeituradecerejeiras/" target="_blank">
+        <img src="assets/images/prefeitura.png" alt="Prefeitura de Cerejeiras">
+        </a>
+        <a href="https://www.instagram.com/governo_do_brasil/" target="_blank">
+        <img src="assets/images/governofederal.png" alt="Governo Federal">
+        </a>
+    </div>
+    </footer>
+</body>
 </html>

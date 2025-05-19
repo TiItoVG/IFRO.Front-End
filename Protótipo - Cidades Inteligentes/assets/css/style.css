@@ -1,113 +1,284 @@
 * {
-    padding: 0%;
-    margin: 0%;
-    font-family: "Fira Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "PT Sans Narrow", sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
 }
 
-.menu {
-    background-color: aliceblue;
-    color: navy;
-    padding: 8px;
+.topbar {
+    background: #7F8FC7;
+    color: white;
+    padding: 10px;
 }
 
-.menu_conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
+.topbar ul {
     list-style: none;
-    display: flex;
-    gap: 8px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.topbar ul li {
+    display: inline;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .menu_link {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 14px;
 }
 
 .menu_link:hover {
-    background-color: purple;
+    background-color: #6071ad;
+    padding: 10px 10px;
 }
 
-.info {
-    background: rgb(69,64,145);
-    background: radial-gradient(circle, rgba(69,64,145,0.8) 0%, rgba(50,37,91,0.8) 50%, rgba(0,0,0,0.8) 100%),
-    url(bebe.jpg);
+.banner {
+    position: relative;
+    text-align: center;
+    background: radial-gradient(circle, rgba(127, 143, 199, 0.7) 0%, rgba(96, 113, 173, 0.7) 100%),
+    url(../images/banner.png);
     background-size: cover;
     background-position: center;
-    height: 260px;
-    color: white;
+    height: 500px;
     padding-top: 64px;
     padding-bottom: 16px;
     text-align: center;
 }
 
-.info > h1 {
-    font-size: 36px;
-    padding: 8px
+.banner img {
+    width: 100%;
+    height: auto;
 }
 
-.social_media > a {
-    padding: 2px;
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.conteudo {
-    background-color: gray;
-    color: black;
-    padding: 16px;
+h2 {
+    padding-left: 80px;
+    margin: 30px 10px 10px 10px;
+    text-align: left;
 }
 
-.conteudo > div {
-    max-width: 1200px;
-    margin: 0 auto;
+.sobre {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
 }
 
-.rodape {
-    background-color: bisque;
-    color: navy;
-    padding: 16px;
+.sobre .texto {
+    width: 60%;
+    float: left;
+    padding: 10px;
 }
 
-.rodape_conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
+.sobre .video {
+    width: 35%;
+    float: right;
+    padding: 10px;
 }
 
-.foto {
+.sobre .midia {
+    float: initial;
+    width: 35%;
+    padding: 10px;
+}
+
+.card-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 16px 16px 100px;
+    justify-content: flex-start;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-imagem {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-titulo {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.card-texto {
+    text-align: justify;
+    margin-top: 8px;
+    line-height: 1.3;
+    width: 100%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-imagem {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.modal-texto {
+    padding: 10px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.modal-texto p {
+    margin-bottom: 15px;
+}
+
+.modal-texto strong {
+    color: #000000 solid;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.equipe {
+    padding: 32px;
+}
+
+.equipe h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.equipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-left: 62px;
+}
+
+.card-equipe {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 5px #000000 solid;
+    object-fit: cover;
 }
 
-.foto:hover {
-    border-width: 4px;
-    border-color: purple;
-    transform: scale(1.1);
-    transition: 800ms;
+.info .nome {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
 }
 
-.titulo {
-    color: darkviolet;
-    /* border: 4px #000000 solid; */
-    padding-top: 20px;
-    padding-bottom: 8px;
+.info .cargo {
+    color: #555;
+    font-size: 16px;
+    margin-top: 3px;
 }
 
-.texto {
-    line-height: 1.5;
+footer {
+    background: #313D62;
+    padding: 35px 60px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 80px;
 }
 
-.galeria {
-    border: 4px #486288 solid;
-    border-radius: 4px;
-    transition: 100ms;
+.footer-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.galeria:hover {
-    border-width: 4px;
-    border-color: purple;
-    transform: scale(1.1);
-    transition: 800ms;
+.footer-logos img {
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-logos a:hover img {
+    transform: scale(1.03);
+    opacity: 0.85;
+    cursor: pointer;
 }
