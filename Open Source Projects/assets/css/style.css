@@ -53,6 +53,11 @@ body {
   flex-direction: column;
 }
 
+.card:hover {
+  transition: 0.8s;
+  transform: scale(1.03);
+}
+
 .card-imagem {
   height: 120px;
   background-color: #eee;
