@@ -168,7 +168,7 @@ footer {
 }
 
 .footer-logos {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 16px;
     padding: 16px 32px;
