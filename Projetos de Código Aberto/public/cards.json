@@ -1,0 +1,111 @@
+
+    [
+    {
+        "id": 1,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 2,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 3,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 4,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 5,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 6,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 7,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 8,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 9,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 10,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+        {
+        "id": 11,
+        "icone": "./public/images/chromium.png",
+        "cor": "#B6D5FF",
+        "titulo": "Chromium",
+        "descricao": "Projeto de navegador de código aberto que serve de base para o Google Chrome e outros navegadores modernos.",
+        "tecnologias": ["Java", "Web", "C++"],
+        "link": "https://www.chromium.org/"
+    },
+    {
+        "id": 12,
+        "icone": "./public/images/libreoffice.png",
+        "cor": "#C7F2F2",
+        "titulo": "LibreOffice",
+        "descricao": "Pacote de produtividade livre e gratuito, com editores de texto, planilhas, apresentações e mais.",
+        "tecnologias": ["Java", "C++", "Office"],
+        "link": "https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/"
+    }
+]
