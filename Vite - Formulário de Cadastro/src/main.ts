@@ -30,7 +30,7 @@ formulario.addEventListener('submit', (event) => {
   listaDePessoas.push(pessoa)
   localStorage.setItem("listaDePessoas", JSON.stringify(listaDePessoas))
   
-  // console.log(listaDePessoas)
+  console.log(listaDePessoas)
 
   limparFormulario()
 })
