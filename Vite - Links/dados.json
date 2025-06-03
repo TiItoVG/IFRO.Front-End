@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    { "id": "1",
+    "urlFoto": "/public/foto1",
+    "nome": "Emília Andrade",
+    "corDeFundo": "#FFFFFF 60%",
+    "corLink": "#6DA9F3"
+    },
+    { "id": "2",
+    "urlFoto": "/public/foto2",
+    "nome": "Tereza Oliveira",
+    "corDeFundo": "#FFFFFF 60%",
+    "corLink": "#3AB74D"
+    },
+    { "id": "3",
+    "urlFoto": "/public/foto3",
+    "nome": "Marco Andrade",
+    "corDeFundo": "#EB5E67",
+    "corLink": "#F1F1F1"
+    },
+    { "id": "4",
+    "urlFoto": "/public/foto4",
+    "nome": "José Silva",
+    "corDeFundo": "#FFCE56",
+    "corLink": "#FFFFFF"
+    },
+    { "id": "5",
+    "urlFoto": "/public/foto5",
+    "nome": "Eliana Silva",
+    "corDeFundo": "#535155",
+    "corLink": "#535155"
+    },
+    { "id": "6",
+    "urlFoto": "/public/foto6",
+    "nome": "Eliane Silva",
+    "corDeFundo": "#76A0B8",
+    "corLink": "#FFFFFF 100%"
+    }
+  ]
+}
