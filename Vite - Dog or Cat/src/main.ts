@@ -1,40 +1,27 @@
-// import './style.css'
+const selectElement = document.getElementById('animalSelect') as HTMLSelectElement;
+const imageElement = document.getElementById('petImage') as HTMLImageElement;
+const fetchButton = document.getElementById('fetchButton') as HTMLButtonElement;
 
-// const select = document.querySelector<HTMLInputElement>("#select")!
-// const formulario = document.querySelector<HTMLInputElement>("#dogorcat")!
-// const imagem = document.querySelector<HTMLInputElement>("#imagemaleatoria")!
+async function fetchImage(animal: string) {
+  if (animal == 'dog') {
+    const response = await fetch('https://dog.ceo/api/breeds/image/random');
+    const data: { message: string } = await response.json();
+    imageElement.src = data.message;
+  } else if (animal == 'cat') {
+    const response = await fetch('https://api.thecatapi.com/v1/images/search');
+    const data: { url: string }[] = await response.json();
+    imageElement.src = data[0].url;
+  } else {
+    imageElement.src = '';
+  }
+}
 
-// select.addEventListener("change", () => {
-//     const valorSelecionado = select.value;
-//     imagem.textContent = `Valor selecionado: ${valorSelecionado}`;
-// });
+selectElement.addEventListener('change', () => {
+  const animal = selectElement.value;
+  fetchImage(animal);
+});
 
-// formulario.addEventListener("submit", (event) => {
-//     event.preventDefault();
-
-//     imagem.textContent = `Fetch realizado, imagem gerada: ${"a"}`;
-// });
-
-// // function limparSelect() {
-// //     cat.value = ""
-// //     dog.value = ""
-// // }
-
-// // limparSelect()
-
-// async function consultarcat() {
-//     const result = await fetch (`https://api.thecatapi.com/v1/images/search`)
-//     const body = await result.json()
-//     // limparSelect()
-//     cat.value = body.url
-// }
-
-// async function consultardog() {
-//     const result = await fetch (`https://dog.ceo/api/breeds/image/random`)
-//     const body = await result.json()
-//     // limparSelect()
-//     dog.value = body.message
-// }
-
-// // api cachorro https://dog.ceo/api/breeds/image/random
-// // api gato https://api.thecatapi.com/v1/images/search
+fetchButton.addEventListener('click', () => {
+  const animal = selectElement.value;
+  fetchImage(animal);
+});

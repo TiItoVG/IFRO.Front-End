@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.link-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.link-item:hover {
+  transform: scale(1.03);
+}
+
+.link-item img {
+  width: 24px;
+  height: 24px;
+}

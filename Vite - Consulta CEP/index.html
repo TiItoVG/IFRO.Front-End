@@ -2,15 +2,18 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consulta CEP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.ts"></script>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <h1>Consulta CEP</h1>
+
     <form>
       <div>
         <label for="cep">CEP</label>
-        <input type="text" id="cep" placeholder="Ex.: 76984-000" />
+        <input type="text" id="cep" placeholder="Ex.: 76984-000" maxlength="9" />
       </div>
       <div>
         <label for="logradouro">Logradouro</label>
@@ -26,13 +29,16 @@
       </div>
       <div>
         <label for="estado">Estado</label>
-        <input type="text" id="estado" placeholder="Ex.: UF" />
+        <select id="estado">
+          <option value="">Selecione um estado</option>
+        </select>
       </div>
       <div>
         <label for="cidade">Cidade</label>
-        <input type="text" id="cidade" placeholder="Ex.: Cidade Limpa" />
+        <select id="cidade">
+          <option value="">Selecione uma cidade</option>
+        </select>
       </div>
     </form>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

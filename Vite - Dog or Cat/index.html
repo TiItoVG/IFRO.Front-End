@@ -1,24 +1,22 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dog or Cat</title>
-  </head>
-  <body>
-    <form id="dogorcat">
-    <div>
-        <label>Selecione</label>
-        <select id="select" name="Selecione">
-          <option value="opcat">Cat</option>
-          <option value="opdog" selected>Dog</option>
-        </select> 
-          <button type="submit">Fetch!</button>
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Dog or Cat</title>
+      <link rel="stylesheet" href="/src/style.css" />
+    </head>
+    <body>
+      <h1>Cachorro ou Gato?</h1>
+      <div class="container">
+        <div class="controls">
+          <select id="animalSelect">
+            <option value="dog">Cachorro</option>
+            <option value="cat">Gato</option>
+          </select>
+          <button id="fetchButton">Fetch!</button>
+        </div>
+        <img id="petImage" src="" alt="Imagem do animal" />
       </div>
-     </form>
-     <div id="imagemaleatoria">
-
-     </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
-</html>
+      <script type="module" src="/src/main.ts"></script>
+    </body>
+  </html>

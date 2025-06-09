@@ -1,31 +1,65 @@
-import './style.css'
+import "../public/assets/css/style.css";
 
-// http://localhost:5173?id="idvalido"
-// json-server --watch dados.json
+type Link = {
+  icone: string;
+  texto: string;
+  url: string;
+};
 
-interface Linktree {
-    id: string,
-    urlFoto: string,
-    nome: string,
-    corDeFundo: string,
-    corLink: string
+type Usuario = {
+  id: string;
+  nome: string;
+  urlFoto: string;
+  corDeFundo: string;
+  corLink: string;
+  corTextoLink: string;
+  borderRadius: string;
+  links: Link[];
+};
+
+async function carregarUsuario() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+
+  const res = await fetch("/dados.json");
+  const data = await res.json();
+
+  const usuario: Usuario | undefined = data.usuarios.find((u: Usuario) => u.id === id);
+
+  if (!usuario) {
+    document.getElementById("app")!.innerHTML = "<p>Usuário não encontrado</p>";
+    return;
+  }
+
+  renderizarPerfil(usuario);
 }
 
-const params = new URLSearchParams(window.location.search)
-const id = params.get("id")
+function renderizarPerfil(usuario: Usuario) {
+  const app = document.getElementById("app")!;
+  app.style.backgroundColor = usuario.corDeFundo;
 
-const app = document.querySelector<HTMLDivElement>("#app")!
+  const html = `
+    <img src="${usuario.urlFoto}" alt="Foto de ${usuario.nome}" class="foto-perfil">
+    <h1>${usuario.nome}</h1>
+    <div class="link-lista">
+      ${usuario.links
+        .map(
+          (link) => `
+        <a href="${link.url}" class="link-item" style="
+          background-color: ${usuario.corLink};
+          color: ${usuario.corTextoLink};
+          border-radius: ${usuario.borderRadius};
+        " target="_blank">
+          <img src="/assets/img/${link.icone}.png" alt="${link.texto}" />
+          <span>${link.texto}</span>
+        </a>
+      `
+        )
+        .join("")}
+    </div>
+  `;
 
-app.innerHTML = `<h1>Olá, Usuário ${id} </h1>`
-
-// Fazer linktree com api
-
-async function carregarLinktree() {
-  const response = await fetch('http:localhost:5173/dados.json')
-  const linktrees: Linktree[] = await response.json()
-  app.innerHTML = `
-  <H1>Projetos Linktree</h1>
-  <div id = 'projeto class = 'projetos'></div>`
+  app.innerHTML = html;
 }
 
-carregarLinktree()
+carregarUsuario();
