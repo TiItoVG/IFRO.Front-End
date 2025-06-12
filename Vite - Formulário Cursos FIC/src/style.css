@@ -6,3 +6,19 @@ body {
     padding: 20px;
     line-height: 1.5;
 }
+
+.grupo {
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #dadada;
+    text-align: left;
+    width: 832px;
+}
+
+.formulario {
+    justify-items: center;
+}
+
