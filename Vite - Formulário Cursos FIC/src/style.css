@@ -46,10 +46,11 @@ input[type=text] {
 
 input[type="radio"],
 input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     accent-color: #286BB9;
-    color: #286BB9
+    color: #286BB9;
+    background-color: white;
 }
 
 .botao {

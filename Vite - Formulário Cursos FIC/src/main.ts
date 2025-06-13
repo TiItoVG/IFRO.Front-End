@@ -11,17 +11,17 @@ app.innerHTML = `
             </div>
 
             <div class="grupo">
-                <label for="nome">* Nome:</label>
+                <label for="nome"><span style="color: red;">*</span> Nome:</label>
                 <input type="text" id="nome" placeholder="Ex.: Maria de Oliveira">
             </div>
             
             <div class="grupo">
-                <label for="email">* E-mail:</label>
+                <label for="email"><span style="color: red;">*</span> E-mail:</label>
                 <input type="text" id="email" placeholder="Ex.: maria.oliveira@exemplo.com">
             </div>
             
             <div class="grupo">
-                <label class="">* Sexo:</label>
+                <label class=""><span style="color: red;">*</span> Sexo:</label>
                 <div class="">
                     <label class="">
                         <input type="radio" name="sexo" id="sexo_masculino">
@@ -35,7 +35,7 @@ app.innerHTML = `
             </div>
             
             <div class="grupo">
-                <label for="cursos">* Curso:</label>
+                <label for="cursos"><span style="color: red;">*</span> Curso:</label>
                 <select id="cursos" class="curso">
                     <option value="0">Selecione um curso</option>
                     <option value="1">HTML e CSS</option>
@@ -56,7 +56,7 @@ app.innerHTML = `
                 </label>
             </div>
 
-            <p>Os campos marcados com * são obrigatórios</p>
+            <p>Os campos marcados com <span style="color: red;">*</span> são obrigatórios</p>
 
             <button type="submit" class="botao">Realizar Inscrição</button>
         </form>
