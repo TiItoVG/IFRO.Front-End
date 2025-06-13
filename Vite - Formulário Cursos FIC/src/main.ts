@@ -36,7 +36,7 @@ app.innerHTML = `
             
             <div class="grupo">
                 <label for="cursos">* Curso:</label>
-                <select id="cursos">
+                <select id="cursos" class="curso">
                     <option value="0">Selecione um curso</option>
                     <option value="1">HTML e CSS</option>
                     <option value="2">Git e GitHub</option>
@@ -46,7 +46,7 @@ app.innerHTML = `
             
             <div class="grupo">
                 <label for="descricao_atendimento">Descreva o atendimento especial (opcional):</label>
-                <textarea id="descricao_atendimento" rows="6"></textarea>
+                <textarea id="descricao_atendimento" rows="6" class="area"></textarea>
             </div>
             
             <div class="grupo">
@@ -58,6 +58,6 @@ app.innerHTML = `
 
             <p>Os campos marcados com * são obrigatórios</p>
 
-            <button type="submit" class="">Realizar Inscrição</button>
+            <button type="submit" class="botao">Realizar Inscrição</button>
         </form>
     </div>`
