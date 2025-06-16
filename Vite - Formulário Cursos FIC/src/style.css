@@ -1,64 +1,128 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #222222;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.5;
+* {
+  font-family: 'Quicksand', sans-serif;
 }
 
-.grupo {
-    background-color: #F1F1F1;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
-    padding: 25px;
-    margin-bottom: 25px;
-    border: 1px solid #dadada;
-    text-align: left;
-    width: 832px;
+body {
+  background-color: white;
+  color: #484946;
+  padding: 20px;
+  line-height: 1.5;
 }
 
 .formulario {
-    justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.curso,
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #286BB9;
-    border-radius: 4px;
-    background-color: white;
+.cabecalho {
+  background-color: #F1F1F1;
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 832px;
+  border-radius: 8px;
+  position: relative;
 }
 
-.area {
-    resize: none;
-    background-color: white;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #286BB9;
-    border-radius: 4px;
+.cabecalho h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.cabecalho p {
+  font-weight: bold;
+}
+
+#toggleTema {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+  width: 24px;
+}
+
+.grupo {
+  background-color: #f1f1f1;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  width: 832px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border: 2px solid #286BB9;
+  border-radius: 4px;
+  background-color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+.radio-inline {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-    width: 14px;
-    height: 14px;
-    accent-color: #286BB9;
-    color: #286BB9;
-    background-color: white;
+  accent-color: #286BB9;
 }
 
 .botao {
   background-color: #286BB9;
+  color: white;
   border: none;
-  border-radius: 8px;
-  color: #FBFCFF;
   padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.rodape {
+  width: 832px;
+  font-size: 0.9em;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #FCFDFC;
+}
+
+body.dark .cabecalho {
+  background-color: #373636;
+}
+
+body.dark .grupo {
+  background-color: #373636;
+  border-color: #1E1E1E;
+}
+
+body.dark input[type="text"],
+body.dark select,
+body.dark textarea {
+  background-color: #1E1E1E;
+  color: #FCFDFC;
+  border: 2px solid #286BB9;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #8F8D99;
+}
+
+body.dark a {
+  color: #286BB9;
+}
+
+body.dark .botao {
+  background-color: #286BB9;
+  color: white;
 }
