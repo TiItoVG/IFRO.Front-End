@@ -12,7 +12,9 @@ body {
 .formulario {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 832px;
+  margin: 0 auto;
 }
 
 .cabecalho {
@@ -42,12 +44,17 @@ body {
 }
 
 .grupo {
+  position: relative;
   background-color: #f1f1f1;
-  border: 1px solid #FFFFFF;
   border-radius: 8px;
   padding: 25px;
   margin-bottom: 25px;
   width: 832px;
+  border-left: 8px solid #286BB9;
+}
+
+.grupo::before {
+  display: none;
 }
 
 input[type="text"],
@@ -84,6 +91,8 @@ input[type="checkbox"] {
   padding: 16px 32px;
   border-radius: 8px;
   cursor: pointer;
+  margin-left: 0px;
+  margin-top: 16px;
 }
 
 .rodape {
@@ -101,8 +110,11 @@ body.dark .cabecalho {
 }
 
 body.dark .grupo {
-  background-color: #373636;
-  border-color: #1E1E1E;
+  border-left-color: #286BB9;
+}
+
+body.dark .grupo::before {
+  background-color: #286BB9;
 }
 
 body.dark input[type="text"],

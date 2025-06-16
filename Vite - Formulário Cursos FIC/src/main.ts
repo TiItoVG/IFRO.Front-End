@@ -20,17 +20,17 @@ app.innerHTML = `
     </div>
 
     <div class="grupo">
-      <label for="nome"><span style="color:red">*</span> Nome:</label>
+      <label for="nome">Nome: <span style="color:red">*</span></label>
       <input type="text" id="nome" placeholder="Ex.: Maria de Oliveira" required>
     </div>
 
     <div class="grupo">
-      <label for="email"><span style="color:red">*</span> E-mail:</label>
+      <label for="email">E-mail: <span style="color:red">*</span></label>
       <input type="text" id="email" placeholder="Ex.: maria.oliveira@gmail.com" required>
     </div>
 
     <div class="grupo">
-      <label><span style="color:red">*</span> Sexo:</label>
+      <label>Sexo: <span style="color:red">*</span></label>
       <div class="radio-inline">
         <label><input type="radio" name="sexo" value="Masculino" required> Masculino</label>
         <label><input type="radio" name="sexo" value="Feminino"> Feminino</label>
@@ -38,7 +38,7 @@ app.innerHTML = `
     </div>
 
     <div class="grupo">
-      <label for="curso"><span style="color:red">*</span> Curso:</label>
+      <label for="curso">Curso: <span style="color:red">*</span></label>
       <select id="curso" required>
         <option value="">Selecione um curso</option>
         <option value="HTML e CSS">HTML e CSS</option>
@@ -53,7 +53,7 @@ app.innerHTML = `
     </div>
 
     <div class="grupo">
-      <label><input type="checkbox" id="termos" required> Estou de acordo com os <a href="#">termos de serviço</a></label>
+      <label><input type="checkbox" id="termos" required> Estou de acordo com os <a href="#">termos de serviço</a> <span style="color:red">*</span></label>
     </div>
 
     <div class="rodape">
