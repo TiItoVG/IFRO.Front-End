@@ -17,6 +17,7 @@ app.innerHTML = `
       <h1>Inscrição nos Cursos FIC</h1>
       <p>Prazo para responder até dia <strong>05/05/2025</strong></p>
       <img src="/lightmode.png" alt="Toggle Tema" id="toggleTema">
+      <a href="/usuarios.html" class="botao">Ver Inscrições</a>
     </div>
 
     <div class="grupo">
@@ -64,26 +65,28 @@ app.innerHTML = `
   </form>
 `;
 
-
 const toggleBtn = document.querySelector<HTMLImageElement>('#toggleTema')!;
-let dark = false;
-  toggleBtn.onclick = () => {
-  document.body.classList.toggle('dark');
-  toggleBtn.src = document.body.classList.contains('dark')
-  ? '/lightmode.png'
-  : '/darkmode.png';
-  dark = !dark;
+const temaSalvo = localStorage.getItem('tema');
+
+if (temaSalvo === 'dark') {
+  document.body.classList.add('dark');
+  toggleBtn.src = '/darkmode.png';
+}
+
+toggleBtn.onclick = () => {
+  const isDark = document.body.classList.toggle('dark');
+  toggleBtn.src = isDark ? '/darkmode.png' : '/lightmode.png';
+  localStorage.setItem('tema', isDark ? 'dark' : 'light');
 };
 
 const schema = z.object({
-  nome: z.string().min(3, 'Nome é obrigatório'),
+  nome: z.string().min(1, 'Nome é obrigatório'),
   email: z.string().email('Email inválido'),
   sexo: z.enum(['Masculino', 'Feminino']),
   curso: z.string().min(1, 'Selecione um curso'),
   descricao: z.string().optional(),
   termos: z.literal(true, { errorMap: () => ({ message: "Você deve aceitar os termos" }) })
 });
-
 
 document.querySelector<HTMLFormElement>('#form')!.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -102,7 +105,6 @@ document.querySelector<HTMLFormElement>('#form')!.addEventListener('submit', asy
     alert(result.error.issues.map(err => err.message).join('\n'));
     return;
   }
-
 
   await fetch('http://localhost:3000/inscricoes', {
     method: 'POST',
