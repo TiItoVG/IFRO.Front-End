@@ -16,7 +16,7 @@ app.innerHTML = `
     <div class="cabecalho">
       <h1>Inscrição nos Cursos FIC</h1>
       <p>Prazo para responder até dia <strong>05/05/2025</strong></p>
-      <img src="/lightmode.png" alt="Toggle Tema" id="toggleTema">
+      <img src="/darkmode.png" alt="Toggle Tema" id="toggleTema">
       <a href="/usuarios.html" class="botao">Ver Inscrições</a>
     </div>
 
@@ -70,12 +70,12 @@ const temaSalvo = localStorage.getItem('tema');
 
 if (temaSalvo === 'dark') {
   document.body.classList.add('dark');
-  toggleBtn.src = '/darkmode.png';
+  toggleBtn.src = '/lightmode.png';
 }
 
 toggleBtn.onclick = () => {
   const isDark = document.body.classList.toggle('dark');
-  toggleBtn.src = isDark ? '/darkmode.png' : '/lightmode.png';
+  toggleBtn.src = isDark ? '/lightmode.png' : '/darkmode.png';
   localStorage.setItem('tema', isDark ? 'dark' : 'light');
 };
 
